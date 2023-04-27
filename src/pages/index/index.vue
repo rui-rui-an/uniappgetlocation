@@ -2,21 +2,27 @@
   <view class="content">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
-      <text class="title">{{ title }}</text>
-      wqe武切维奇esdw
     </view>
-    <view class="box">
-      <van-cell-group>
-        <van-cell title="单元格" value="内容" />
-        <van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />
-      </van-cell-group>
-    </view>
+    <button open-type="getUserInfo" @getuserinfo="getuserinfo">getuserinfo获取个人资料登录</button>
+    <button @click="toLogin">getUserProfile获取个人资料登录</button>
+    <button open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">唤起授权手机号登录</button>
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello')
+import { onLoad } from '@dcloudio/uni-app'
+onLoad(() => {})
+const getuserinfo = (e: any) => {
+  console.log(e)
+}
+const toLogin = () => {
+  uni.getUserProfile({ desc: '用于获取个人资料' }).then(res2 => {
+    console.log(res2)
+  })
+}
+const getPhoneNumber = (e: any) => {
+  console.log(e)
+}
 </script>
 
 <style lang="less" scoped>

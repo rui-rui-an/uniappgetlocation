@@ -51,6 +51,14 @@
     /* 小程序特有相关 */
     "mp-weixin" : {
         "appid" : "wxd012ca2c1cfc762f",
+        "requiredPrivateInfos": [
+          "getLocation"
+        ],
+        "permission":{
+          "scope.userLocation":{
+            "desc":"授权位置信息"
+          }
+        },
         "setting" : {
             "urlCheck" : false
         },

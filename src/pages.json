@@ -1,7 +1,15 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
   {
-    "path": "pages/home/index"
+    "path": "pages/home/index",
+    "style": {
+      "usingComponents": {
+        "van-cell-group": "/wxcomponents/vant/cell-group/index",
+        "van-field": "/wxcomponents/vant/field/index",
+        "van-popup": "/wxcomponents/vant/popup/index",
+        "van-cell":"/wxcomponents/vant/cell/index"
+      }
+    }
   },
 		{
 			"path": "pages/index/index",
@@ -9,7 +17,8 @@
 				"navigationBarTitleText": "大数据",
         "usingComponents": {
           "van-cell": "/wxcomponents/vant/cell/index",
-          "van-cell-group": "/wxcomponents/vant/cell-group/index"
+          "van-cell-group": "/wxcomponents/vant/cell-group/index",
+          "van-popup": "/wxcomponents/vant/popup/index"
         }
 			}
 		},
@@ -17,7 +26,15 @@
       "path": "pages/course/index"
     },
     {
-      "path": "pages/study/index"
+      "path": "pages/study/index",
+      "style": {
+        "usingComponents": {
+          "van-cell-group": "/wxcomponents/vant/cell-group/index",
+          "van-field": "/wxcomponents/vant/field/index",
+          "van-popup": "/wxcomponents/vant/popup/index",
+          "van-cell":"/wxcomponents/vant/cell/index"
+        }
+      }
     },
     {
       "path": "pages/my/index"
